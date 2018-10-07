@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>The Difference Table in Julia version</title>
+<link href="../css/prism.css" rel="stylesheet" />
+</head>
+<body>
+<script src="../js/prism.js"></script>
+<h1 align="center">The Difference Table in Julia version</h1>
+<hr>
+Please read the <a href="https://docs.julialang.org/en/v0.7.0/NEWS/">Julia 0.7 rlease notes</a> to see what has changed since previous version.<br />
+<hr>
+OLD is v0.6.3, NEW is v0.7.0 or later.<br /><br />
+<table border="1">
+<tr><th>Item</th><th>OLD</th><th>NEW</th></tr>
+<tr align="center">
+<td><a href="#i1">01</a></td>
+<td><a href="https://docs.julialang.org/en/v0.6/stdlib/arrays/#Base.linspace">linspace</a></td>
+<td><a href="https://docs.julialang.org/en/v1.1-dev/base/math/#Base.range">range</a></td>
+</tr>
+<tr align="center">
+<td><a href="i2">02</a></td>
+<td><a href="https://docs.julialang.org/en/v0.6/stdlib/collections/#Base.shift!">shift!</a></td>
+<td><a href="https://docs.julialang.org/en/v1.1-dev/base/collections/#Base.popfirst!">popfirst!</a></td>
+</tr>
+<tr align="center">
+<td><a href="i3">03</a></td>
+<td><a href="https://docs.julialang.org/en/v0.6/stdlib/collections/#Base.unshift!">unshift!</a></td>
+<td><a href="https://docs.julialang.org/en/v1.1-dev/base/collections/#Base.pushfirst!">pushfirst!</a></td>
+</tr>
+<tr align="center">
+<td><a href="i4">04</a></td>
+<td><a href="https://docs.julialang.org/en/v0.6/stdlib/strings/#Base.search">search</a></td>
+<td><a href="https://docs.julialang.org/en/v1.1-dev/base/collections/#Base.pushfirst!">pushfirst!</a></td>
+</tr>
+<tr align="center">
+<td><a href="i5">05</a></td>
+<td><a href="https://docs.julialang.org/en/v0.6/stdlib/strings/#Base.rsearch">search</a></td>
+
+<tr align="center">
+<td><a href="i6">06</a></td>
+<td><a href="https://docs.julialang.org/en/v0.6/stdlib/strings/#Base.searchindex">searchindex</a></td>
+<tr align="center">
+<td><a href="i7">07</a></td>
+<td><a href="https://docs.julialang.org/en/v0.6/stdlib/strings/#Base.rsearchindex">search</a></td>
+</table>
+<hr>
+<h1 id="i1">Item 01</h1>
+OLD:<br />
+<pre><code class="language-julia">linspace(start, stop, n=50)</code></pre>
+NEW:<br />
+<pre><code class="language-julia">range(start; length, stop, step=1)</code></pre>
+<hr>
+<h1 id="i2">Item 02</h1>
+OLD:<br />
+<pre><code class="lang-julia">shift!(collection)</code></pre>
+NEW:<br />
+<pre><code class="lang-julia">popfirst!(collection)</code></pre>
+<hr>
+<h1 id="i3">Item 03</h1>
+OLD:<br />
+<pre><code class="lang-julia">unshift!(collection, item...)</code></pre>
+NEW:<br />
+<pre><code class="lang-julia">pushfirst!(collection, item...)</code></pre>
+<hr>
+<h1 id="i4">Item 04</h1>
+OLD:<br />
+<pre><code class="lang-julia">search(string::AbstractString, chars::Chars, [start::Integer])</code></pre>
+
+<hr>
+<h1 id="i5">Item 05</h1>
+OLD:<br />
+<pre><code class="lang-julia">rsearch(string::AbstractString, chars::Chars, [start::Integer])</code></pre>
+
+<hr>
+<h1 id="i6">Item 06</h1>
+OLD:<br />
+<pre><code class="lang-julia">searchindex(string::AbstractString, substring, [start::Integer])</code></pre>
+<hr>
+<h1 id="i7">Item 07</h1>
+OLD:<br />
+<pre><code class="lang-julia">rsearchindex(string::AbstractString, substring, [start::Integer])</code></pre>
+<hr>
+</body>
+</html>
