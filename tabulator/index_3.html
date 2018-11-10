@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Example Table 3</title>
+<script type="text/javascript" src="../js/tabulator.min.js"></script>
+<link href="../css/tabulator.min.css" rel="stylesheet" />
+</head>
+<body>
+<h1>Example Table 3</h1>
+<hr/>
+<table id="example-table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Favourite Color</th>
+<th>Date Of Birth</th>
+<th>Cheese Preference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oli Bob</td>
+<td>12</td>
+<td>male</td>
+<td>red</td>
+<td></td>
+<td>Cheader</td>
+</tr>
+<tr>
+<td>Mary May</td>
+<td>1</td>
+<td>female</td>
+<td>blue</td>
+<td>14/05/1982</td>
+<td>Gouda</td>
+</tr>
+<tr>
+<td>Christine Lobowski</td>
+<td>42</td>
+<td>female</td>
+<td>green</td>
+<td>22/05/1982</td>
+<td>Manchego</td>
+</tr>
+<tr>
+<td>Brendon Philips</td>
+<td>100</td>
+<td>male</td>
+<td>orange</td>
+<td>01/08/1980</td>
+<td>Brie</td>
+</tr>
+<tr>
+<td>Margret Marmajuke</td>
+<td>16</td>
+<td>female</td>
+<td>yellow</td>
+<td>31/01/1999</td>
+<td>Cheader</td>
+</tr>
+</tbody>
+</table>
+
+<script type="text/javascript">
+           
+    var table = new Tabulator("#example-table", {
+        layout:"fitColumns",
+        columns:[
+           {title:"Name", width:150, headerFilter:true},
+           {title:"Age",  formatter:"progress"},
+           {title:"Gender", field:"gender", headerSort:false},
+           {title:"Favourite Color", field:"col", headerFilter:"select", headerFilterParams:{values:true}},
+           {title:"Date Of Birth", headerSort:false},
+        ],
+    });
+
+</script>
+</body>
+</html>

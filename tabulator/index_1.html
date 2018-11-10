@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Example Table 1</title>
+<script type="text/javascript" src="../js/tabulator.min.js"></script>
+<link href="../css/tabulator.min.css" rel="stylesheet" />
+</head>
+<body>
+<h1>Example Table 1</h1>
+<hr/>
+<div id="example-table"></div>
+
+<script type="text/javascript">
+    var tabledata = [
+        {id:1, name:"Oli Bob", age:12, gender:"male", rating:1, col:"red", dob:"", car:1, lucky_no:5, cheese:"Cheader"},
+        {id:2, name:"Mary May", age:1, gender:"female", rating:2, col:"blue", dob:"14/05/1982", car:true, lucky_no:10, cheese:"Gouda"},
+        {id:3, name:"Christine Lobowski", age:42, gender:"female", rating:0, col:"green", dob:"22/05/1982", car:"true", lucky_no:12, cheese:"Manchego"},
+        {id:4, name:"Brendon Philips", age:100, gender:"male", rating:1, col:"orange", dob:"01/08/1980", lucky_no:18, cheese:"Brie"},
+        {id:5, name:"Margret Marmajuke", age:16, gender:"female", rating:5, col:"yellow", dob:"31/01/1999", lucky_no:33, cheese:"Cheader"},
+    ];
+           
+    var table = new Tabulator("#example-table", {
+        data:tabledata,
+        layout:"fitColumns",
+        columns:[
+           {title:"Name", field:"name", width:150},
+           {title:"Age",  field:"age", formatter:"progress"},
+           {title:"Gender", field:"gender"},
+           {title:"Favourite Color", field:"col"},
+           {title:"Date Of Birth", field:"dob",headerSort:false},
+           {title:"Cheese Preference", field:"cheese"},
+        ],
+        rowClick:function(e, row){
+            alert("Row " + row.getData().id + " Clicked!!!!");
+ 	},
+    });
+
+</script>
+</body>
+</html>
